@@ -1,0 +1,54 @@
+input,expected_output
+,
+if (b) { f() },"if (b) {
+    f()
+}"
+"if (b) { f()
+
+f() }","if (b) {
+    f()
+
+    f()
+}"
+1/2,1 / 2
+1 /2,1 / 2
+1/ 2,1 / 2
+1 / 2,1 / 2
+a/b,a / b
+(a+b)/c,(a + b) / c
+a/(b-c),a / (b - c)
+(a*b)/(c*d),(a * b) / (c * d)
+"a%%b","a %% b"
+"a%/%b","a %/% b"
+"a:b","a : b"
+a^b,a ^ b
+a()/b(),a() / b()
+a/+b,a / +b
+a/-b,a / -b
+a[b]/c,a[b] / c
+a/b[c],a / b[c]
+a[[b]]/c,a[[b]] / c
+a/b[[c]],a / b[[c]]
+"
+","
+"
+"
+
+","
+
+"
+"# \n","# \n"
+"# \r","# \r"
+"# \r\n","# \r\n"
+# a/b,# a/b
+"#
+a/b","#
+a / b"
+"# a/b * c/d","# a/b * c/d"
+"""a/b""","""a/b"""
+"'a/b'","""a/b"""
+"`a/b` <- c","`a/b` <- c"
+"a(""b/c"", d/e, ""f/g"")  # h/i","a(""b/c"", d / e, ""f/g"")  # h/i"
+"a(""#"", b/c)","a(""#"", b / c)"
+"""\"" a/b""","""\"" a/b"""
+"#!/usr/bin/Rscript","#!/usr/bin/Rscript"

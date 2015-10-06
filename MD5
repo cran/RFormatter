@@ -1,0 +1,11 @@
+e2414807b5267d0c1507309e75f2c265 *DESCRIPTION
+95c24c0a0b3e1fc47835e592d7b70529 *NAMESPACE
+88894c788d1d2cce5fa592f91b8061b2 *R/R_source_tool.R
+fbf0a53c007f51818b0fbf29d10d0dd5 *R/format_R_source_code.R
+2b325d01adae6f37146341be05640774 *R/toolkit.R
+fc27ef4c71c12b62716d08a4428ed3de *README.md
+9fdb5906989269189b0bd729cae68b79 *exec/utility.R
+abe658547fed035c2d963e462864b6e1 *man/format_R_source_code.Rd
+b9027fc53d57a4294a71ba3757d26671 *tests/testthat.R
+cbadf98c714d44859400309fa17c59c2 *tests/testthat/cases.csv
+7a37850c0b2271f2a71a89052eeff8c0 *tests/testthat/test_formatter.R
