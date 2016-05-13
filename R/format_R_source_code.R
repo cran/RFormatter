@@ -22,7 +22,7 @@
 #' format_R_source_code("if (b) { f() }")
 #' format_R_source_code("if (b) { f()\n\nf() }")
 #' format_R_source_code("p = 2", list(arrow = TRUE, width.cutoff = 80))
-#' format_R_source_code("e^x", spaced_operators = c("/"))
+#' format_R_source_code("(k/n)^x", spaced_operators = c("/"))
 #'
 #' \dontrun{
 #' format_R_source_code("f()", text = NULL)
@@ -71,7 +71,19 @@ space_operators <- function(source_lines, spaced_operators) {
         replacement <- "\\1 \\2 \\3"
 
         space_actual_code <- function(actual_code) {
-            replace_pattern(search, replacement, actual_code)
+            result <- actual_code
+            is_done <- FALSE
+            # Do multiple iterations of replacement to address overlapping matches.
+            iteration_remainder <- 3
+
+            while (!is_done) {
+                original_result <- result
+                result <- replace_pattern(search, replacement, original_result)
+                iteration_remainder <- iteration_remainder - 1
+                is_done <- result == original_result || iteration_remainder <= 0
+            }
+
+            result
         }
 
         source_lines <- sapply(source_lines, function(source_line) {

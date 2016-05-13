@@ -52,3 +52,5 @@ a / b"
 "a(""#"", b/c)","a(""#"", b / c)"
 """\"" a/b""","""\"" a/b"""
 "#!/usr/bin/Rscript","#!/usr/bin/Rscript"
+a^b/c,a ^ b / c
+a^b/c^d,a ^ b / c ^ d
